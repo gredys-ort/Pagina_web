@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Computadora Z1 de Konrad Zuse</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 20px;
+      background-color: #dc861d;
+    }
+
+    h1 {
+      color: #004080;
+      text-align: center;
+    }
+
+    img {
+      display: block;
+      margin: 0 auto;
+      max-width: 100%;
+    }
+
+    p {
+      text-align: justify;
+    }
+
+    /* Estilos para el formulario */
+    form {
+      margin: 20px auto;
+      max-width: 400px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    select {
+      width: 100%;
+      padding: 5px;
+    }
+
+    /* Estilos para el div de información */
+    #informacion {
+      margin: 20px auto;
+      max-width: 400px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    /* Estilos para la barra de paginación */
+    .pagination {
+      display: flex;
+      justify-content: center;
+      list-style: none;
+      padding: 0;
+      margin: 20px;
+    }
+
+    .pagination li {
+      margin: 5px;
+    }
+
+    .pagination a {
+      padding: 5px 10px;
+      text-decoration: none;
+      background-color: #f1f1f1;
+      color: #004080;
+      border: 1px solid #ccc;
+    }
+
+    .pagination a:hover {
+      background-color: #004080;
+      color: #f1f1f1;
+    }
+
+    .pagination .active {
+      background-color: #004080;
+      color: #f1f1f1;
+      border: 1px solid #004080;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Computadora Z1 de Konrad Zuse</h1>
+
+  <img src="C:\Users\Usuario\Desktop\Desarrollo Web\Pagina Web\pc.jpg" alt="Computadora Z1" width="400">
+
+  <form>
+    <label for="opciones">Selecciona una opción:</label>
+    <select id="opciones" onchange="mostrarInformacion()">
+      <option value="opcion0" selected>Selecciona una opción</option>
+      <option value="opcion1">Año de creación</option>
+      <option value="opcion2">Tipo de máquina</option>
+      <option value="opcion3">Función principal</option>
+    </select>
+  </form>
+
+  <div id="informacion">
+    <!-- Aquí se mostrará la información seleccionada -->
+  </div>
+
+  <script>
+    function mostrarInformacion() {
+      const opciones = document.getElementById("opciones");
+      const seleccion = opciones.options[opciones.selectedIndex].value;
+      const informacionDiv = document.getElementById("informacion");
+
+      switch (seleccion) {
+        case "opcion1":
+          informacionDiv.innerHTML = "<p>Año de creación: 1935-1938</p>";
+          break;
+        case "opcion2":
+          informacionDiv.innerHTML = "<p>Tipo de máquina: Electromecánica</p>";
+          break;
+        case "opcion3":
+          informacionDiv.innerHTML = "<p>Función principal: Computadora programable y automática</p>";
+          break;
+        default:
+          informacionDiv.innerHTML = "";
+      }
+    }
+  </script>
+
+  <!-- Barra de paginación numérica -->
+  <ul class="pagination">
+    <li><a href="index.html">index</a></li>
+    <li><a href="pagina1.html">1</a></li>
+    <li><a href="pagina2.html">2</a></li>
+    <li><a href="pagina3.html">3</a></li>
+    <!-- Agregar más enlaces para más páginas -->
+  </ul>
+
+</body>
+
+</html>
+
